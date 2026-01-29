@@ -69,7 +69,17 @@ rmtn-solo-dev/
 │   ├── workflows.md
 │   └── examples.md
 ├── agents/
+│   ├── mimir.agent.yaml
+│   ├── thor.agent.yaml
+│   ├── thor-sidecar/
+│   ├── mimir.spec.md
+│   └── thor.spec.md
 ├── workflows/
+│   ├── scan-project/     (workflow.md + steps/)
+│   ├── new-quest/
+│   ├── execute-quest/
+│   ├── update-saga/
+│   └── quick-fix/
 └── _module-installer/
 ```
 
@@ -87,12 +97,12 @@ For detailed user guides and documentation, see the **[docs/](docs/)** folder:
 
 ## Development Status
 
-This module is currently in development. The following components are planned:
+This module has core components built and is ready for installation testing:
 
-- [ ] Agents: 2 agents
-- [ ] Workflows: 5 workflows
+- [x] Agents: 2 agents (Mimir, Thor) — in `agents/*.agent.yaml`
+- [x] Workflows: 5 workflows (scan-project, new-quest, execute-quest, update-saga, quick-fix) — in `workflows/*/workflow.md` and `workflows/*/steps/`
 
-See TODO.md for detailed status.
+See TODO.md for detailed status and next steps (installation testing, docs).
 
 ---
 

@@ -6,32 +6,39 @@ Development roadmap for rmtn-solo-dev module.
 
 ## Agents to Build
 
-- [ ] Mimir (Context Keeper)
+- [x] Mimir (Context Keeper)
   - Use: `bmad:bmb:agents:agent-builder`
   - Spec: `agents/mimir.spec.md`
-- [ ] Thor (Implementation Lead)
+  - Built: `agents/mimir.agent.yaml`
+- [x] Thor (Implementation Lead)
   - Use: `bmad:bmb:agents:agent-builder`
   - Spec: `agents/thor.spec.md`
+  - Built: `agents/thor.agent.yaml`, `agents/thor-sidecar/`
 
 ---
 
 ## Workflows to Build
 
-- [ ] scan-project
+- [x] scan-project
   - Use: `bmad:bmb:workflows:workflow` or `/workflow`
   - Spec: `workflows/scan-project/scan-project.spec.md`
-- [ ] new-quest
+  - Built: `workflows/scan-project/workflow.md`, `workflows/scan-project/steps/`
+- [x] new-quest
   - Use: `bmad:bmb:workflows:workflow` or `/workflow`
   - Spec: `workflows/new-quest/new-quest.spec.md`
-- [ ] execute-quest
+  - Built: `workflows/new-quest/workflow.md`, `workflows/new-quest/steps/`
+- [x] execute-quest
   - Use: `bmad:bmb:workflows:workflow` or `/workflow`
   - Spec: `workflows/execute-quest/execute-quest.spec.md`
-- [ ] update-saga
+  - Built: `workflows/execute-quest/workflow.md`, `workflows/execute-quest/steps/`
+- [x] update-saga
   - Use: `bmad:bmb:workflows:workflow` or `/workflow`
   - Spec: `workflows/update-saga/update-saga.spec.md`
-- [ ] quick-fix
+  - Built: `workflows/update-saga/workflow.md`, `workflows/update-saga/steps/`
+- [x] quick-fix
   - Use: `bmad:bmb:workflows:workflow` or `/workflow`
   - Spec: `workflows/quick-fix/quick-fix.spec.md`
+  - Built: `workflows/quick-fix/workflow.md`, `workflows/quick-fix/steps/`
 
 ---
 
@@ -55,11 +62,11 @@ Development roadmap for rmtn-solo-dev module.
 
 ## Next Steps
 
-1. Build agents using create-agent workflow
-2. Build workflows using create-workflow workflow
-3. Test installation and functionality
+1. ~~Build agents using create-agent workflow~~ (done: agents in `agents/*.agent.yaml`)
+2. ~~Build workflows using create-workflow workflow~~ (done: 5 workflows with steps)
+3. Test installation and functionality (`bmad install rmtn-solo-dev`)
 4. Iterate based on testing
 
 ---
 
-_Last updated: 2026-01-27_
+_Last updated: 2026-01-29_

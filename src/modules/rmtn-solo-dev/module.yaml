@@ -2,7 +2,7 @@ code: rmtn-solo-dev
 name: "RMTN Developer Suite"
 header: "A 'Senior Developer in a Box' for elite solo developers."
 subheader: "Automates context management and enforces a 'Plan -> Execute' workflow."
-default_selected: false
+default_selected: true
 
 # Custom Configuration Variables
 saga_folder:

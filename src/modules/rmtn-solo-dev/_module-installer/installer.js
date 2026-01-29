@@ -1,7 +1,6 @@
 const fs = require('fs-extra');
 const path = require('node:path');
 const chalk = require('chalk');
-const platformCodes = require(path.join(__dirname, '../../../../tools/cli/lib/platform-codes'));
 
 /**
  * RMTN Developer Suite Installer

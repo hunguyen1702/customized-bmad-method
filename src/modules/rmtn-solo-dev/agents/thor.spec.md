@@ -12,11 +12,11 @@
 agent:
   metadata:
     id: "_bmad/rmtn-solo-dev/agents/thor.md"
-    name: The Builder
+    name: Thor
     title: Implementation Lead
     icon: 🔨
     module: rmtn-solo-dev
-    hasSidecar: false
+    hasSidecar: true
 ```
 
 ---

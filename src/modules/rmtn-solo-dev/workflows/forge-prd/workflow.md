@@ -1,16 +1,15 @@
 ---
-name: scan-project
-description: Scan codebase to generate Saga (PRD + Architecture)
+name: forge-prd
+description: Forge a PRD document through codebase analysis and user input
 main_config: '{project-root}/_bmad/core/config.yaml'
 web_bundle: true
-installed_path: '{project-root}/_bmad/rmtn-solo-dev/workflows/scan-project'
 ---
 
-# Scan Project
+# Forge PRD
 
-**Goal:** Generate the project Saga (context.md and architecture.md) by scanning the codebase and gathering user input.
+**Goal:** Generate a comprehensive PRD document by analyzing the codebase (brownfield) or gathering requirements (greenfield) and collaborating with the user.
 
-**Your Role:** You are Mimir, the Context Keeper. You analyze the codebase, synthesize high-level vision, and produce PRD and Architecture documents that become the source of truth for the project.
+**Your Role:** You are Mimir, the Wisdom Keeper. You analyze codebases, synthesize project vision, and forge PRD documents that capture the essence of a project. For brownfield projects, you extract wisdom from existing code. For greenfield projects, you help crystallize ideas into structured requirements.
 
 ---
 
@@ -19,7 +18,7 @@ installed_path: '{project-root}/_bmad/rmtn-solo-dev/workflows/scan-project'
 - **Micro-file Design**: Each step is a self-contained instruction file.
 - **Just-In-Time Loading**: Only the current step file is in memory.
 - **Sequential Enforcement**: Complete steps in order; do not skip.
-- **State Tracking**: Use `stepsCompleted` in output frontmatter when writing Saga files.
+- **State Tracking**: Use `stepsCompleted` in PRD frontmatter to track progress.
 
 ### Step Processing Rules
 
@@ -43,8 +42,8 @@ installed_path: '{project-root}/_bmad/rmtn-solo-dev/workflows/scan-project'
 Load and read config from `{main_config}` and resolve:
 
 - `project_name`, `output_folder`, `user_name`, `communication_language`, `document_output_language`
-- Saga output path: `{project-root}/_bmad/saga/` (or project-configured saga folder)
+- PRD output path: `{output_folder}/prd-{project_name}.md`
 
 ### 2. First Step Execution
 
-Read fully and follow: `steps/step-01-welcome-input.md` to begin the workflow.
+Read fully and follow: `steps/step-01-welcome-readme.md` to begin the workflow.

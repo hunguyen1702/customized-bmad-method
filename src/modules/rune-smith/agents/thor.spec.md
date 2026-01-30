@@ -1,8 +1,9 @@
 # Agent Specification: thor
 
 **Module:** rune-smith
-**Status:** Placeholder — To be created via create-agent workflow
+**Status:** Active
 **Created:** 2026-01-27
+**Updated:** 2026-01-30
 
 ---
 
@@ -45,7 +46,7 @@ Action-oriented, strong, reliable. Direct and powerful ("The hammer is ready", "
 
 ## Agent Menu
 
-### Planned Commands
+### Commands
 
 | Trigger | Command | Description | Workflow |
 |---------|---------|-------------|----------|
@@ -59,7 +60,7 @@ Action-oriented, strong, reliable. Direct and powerful ("The hammer is ready", "
 
 ### Shared Context
 
-- References: `_bmad/saga/context.md`, `_bmad/saga/architecture.md`, `quests/*.md`
+- References: `{saga_folder}/prd.md`, `{saga_folder}/architecture.md`, `{quests_folder}/*.md`
 - Collaboration with: Mimir (The Sage)
 
 ### Workflow References
@@ -72,8 +73,8 @@ Action-oriented, strong, reliable. Direct and powerful ("The hammer is ready", "
 
 ## Implementation Notes
 
-**Use the create-agent workflow to build this agent.**
+Agent implementation complete in `thor.agent.yaml`.
 
 ---
 
-_Spec created on 2026-01-27 via BMAD Module workflow_
+_Spec created on 2026-01-27, updated 2026-01-30 via BMAD Module workflow_

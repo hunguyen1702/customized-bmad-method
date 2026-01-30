@@ -1,8 +1,6 @@
 ---
 name: step-05-create-quest
 description: Write Quest file to quests folder
-saga_folder: '{project-root}/_bmad/saga'
-quests_folder: '{project-root}/quests'
 ---
 
 # Step 5: Create Quest
@@ -29,7 +27,7 @@ Filename pattern: `quest-{id}-{slug}.md` (e.g. `quest-001-add-login.md`).
 
 ### 2. Ensure Quests Folder Exists
 
-Ensure the directory `{project-root}/quests/` (or project-configured quests folder) exists; create if needed.
+Ensure the directory `{quests_folder}/` exists; create if needed.
 
 ### 3. Write Quest File
 

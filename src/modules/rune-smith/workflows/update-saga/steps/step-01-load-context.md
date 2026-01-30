@@ -2,8 +2,6 @@
 name: step-01-load-context
 description: Read current Saga and completed Quest(s)
 nextStepFile: './step-02-analyze-changes.md'
-saga_folder: '{project-root}/_bmad/saga'
-quests_folder: '{project-root}/quests'
 ---
 
 # Step 1: Load Context
@@ -17,7 +15,7 @@ quests_folder: '{project-root}/quests'
 
 ## GOAL
 
-Load the current Saga (context.md, architecture.md) and the completed Quest(s) so you can determine what to update.
+Load the current Saga (prd.md, architecture.md) and the completed Quest(s) so you can determine what to update.
 
 ## SEQUENCE
 
@@ -25,10 +23,10 @@ Load the current Saga (context.md, architecture.md) and the completed Quest(s) s
 
 Read:
 
-- `{project-root}/_bmad/saga/context.md`
-- `{project-root}/_bmad/saga/architecture.md`
+- `{saga_folder}/prd.md`
+- `{saga_folder}/architecture.md`
 
-If either is missing, inform the user they may need to run [SC] Scan Project first.
+If either is missing, inform the user they may need to run [FP] Forge PRD and [FA] Forge Architecture first.
 
 ### 2. Identify Completed Quests
 

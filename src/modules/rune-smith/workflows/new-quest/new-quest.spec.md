@@ -1,8 +1,9 @@
 # Workflow Specification: new-quest
 
 **Module:** rune-smith
-**Status:** Placeholder — To be created via create-workflow workflow
+**Status:** Active
 **Created:** 2026-01-27
+**Updated:** 2026-01-30
 
 ---
 
@@ -53,7 +54,7 @@ installed_path: '{project-root}/_bmad/rune-smith/workflows/new-quest'
 ### Required Inputs
 
 - User Request
-- Saga (`context.md`, `architecture.md`)
+- Saga (`prd.md`, `architecture.md`)
 
 ### Optional Inputs
 
@@ -88,8 +89,8 @@ Mimir (Context provider via Saga)
 
 ## Implementation Notes
 
-**Use the create-workflow workflow to build this workflow.**
+Workflow implementation complete with 5 steps in `steps/` folder.
 
 ---
 
-_Spec created on 2026-01-27 via BMAD Module workflow_
+_Spec created on 2026-01-27, updated 2026-01-30 via BMAD Module workflow_

@@ -10,10 +10,10 @@ rune-smith includes 2 specialized agents:
 **Icon:** 📜
 
 **Role:**
-Context Keeper, Analyst. Scans codebase, maintains "Saga" (PRD/Arch), ensures consistency. Wise, observant.
+Context Keeper, Analyst. Codebase analyst and documentation architect specializing in high-level context synthesis. Maintains "Saga" (PRD/Arch), ensures consistency. Wise, observant.
 
 **When to Use:**
-- When you need to generate initial project documentation.
+- When you need to generate initial project documentation (PRD, Architecture).
 - When you need to update the Saga after completing features.
 - When you need "wisdom" or high-level context analysis.
 
@@ -23,8 +23,10 @@ Context Keeper, Analyst. Scans codebase, maintains "Saga" (PRD/Arch), ensures co
 - Context maintenance
 
 **Menu Trigger(s):**
-- `[SC]` Scan Project
+- `[FP]` Forge PRD
+- `[FA]` Forge Architecture
 - `[US]` Update Saga
+- `[PM]` Party Mode
 
 ---
 

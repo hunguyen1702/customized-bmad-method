@@ -2,8 +2,6 @@
 name: step-03-select-plan
 description: Select best approach and draft Tech Spec
 nextStepFile: './step-04-review.md'
-saga_folder: '{project-root}/_bmad/saga'
-quests_folder: '{project-root}/quests'
 ---
 
 # Step 3: Select & Plan

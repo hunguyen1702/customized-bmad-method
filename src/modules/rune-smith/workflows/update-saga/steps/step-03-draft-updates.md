@@ -2,9 +2,6 @@
 name: step-03-draft-updates
 description: Propose changes to Saga files
 nextStepFile: './step-04-review.md'
-saga_folder: '{project-root}/_bmad/saga'
-output_context: '{project-root}/_bmad/saga/context.md'
-output_architecture: '{project-root}/_bmad/saga/architecture.md'
 ---
 
 # Step 3: Draft Updates
@@ -18,13 +15,13 @@ output_architecture: '{project-root}/_bmad/saga/architecture.md'
 
 ## GOAL
 
-Produce draft updates for context.md and architecture.md based on the impact analysis (Step 2).
+Produce draft updates for prd.md and architecture.md based on the impact analysis (Step 2).
 
 ## SEQUENCE
 
-### 1. Draft context.md Updates
+### 1. Draft prd.md Updates
 
-- Start from the current context.md content.
+- Start from the current prd.md content.
 - Apply the proposed PRD changes (add/change/remove sections).
 - Keep the draft in memory or a WIP buffer; do not write to disk until Step 5.
 

@@ -2,8 +2,6 @@
 name: step-02-analyze-changes
 description: Determine impact on PRD/Arch
 nextStepFile: './step-03-draft-updates.md'
-saga_folder: '{project-root}/_bmad/saga'
-quests_folder: '{project-root}/quests'
 ---
 
 # Step 2: Analyze Changes
@@ -17,11 +15,11 @@ quests_folder: '{project-root}/quests'
 
 ## GOAL
 
-Determine how the completed Quest(s) affect the Saga: what should be added or changed in context.md (PRD) and architecture.md.
+Determine how the completed Quest(s) affect the Saga: what should be added or changed in prd.md (PRD) and architecture.md.
 
 ## SEQUENCE
 
-### 1. Impact on context.md (PRD)
+### 1. Impact on prd.md (PRD)
 
 For each completed Quest:
 

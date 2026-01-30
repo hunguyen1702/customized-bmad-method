@@ -1,8 +1,9 @@
 # Workflow Specification: update-saga
 
 **Module:** rune-smith
-**Status:** Placeholder — To be created via create-workflow workflow
+**Status:** Active
 **Created:** 2026-01-27
+**Updated:** 2026-01-30
 
 ---
 
@@ -10,7 +11,7 @@
 
 **Goal:** Update Saga based on completed Quests.
 
-**Description:** Mimir analyzes completed Quests and code changes to update the `context.md` and `architecture.md` files, ensuring the Saga remains current.
+**Description:** Mimir analyzes completed Quests and code changes to update the `prd.md` and `architecture.md` files, ensuring the Saga remains current.
 
 **Workflow Type:** Feature
 
@@ -70,8 +71,8 @@ installed_path: '{project-root}/_bmad/rune-smith/workflows/update-saga'
 
 ### Output Files
 
-- Updated `_bmad/saga/context.md`
-- Updated `_bmad/saga/architecture.md`
+- Updated `{saga_folder}/prd.md`
+- Updated `{saga_folder}/architecture.md`
 
 ---
 
@@ -89,8 +90,8 @@ None
 
 ## Implementation Notes
 
-**Use the create-workflow workflow to build this workflow.**
+Workflow implementation complete with 5 steps in `steps/` folder.
 
 ---
 
-_Spec created on 2026-01-27 via BMAD Module workflow_
+_Spec created on 2026-01-27, updated 2026-01-30 via BMAD Module workflow_

@@ -31,9 +31,9 @@ agent:
       - Pattern recognition is implementation intelligence - evaluate existing approaches before proposing new ones
 
   critical_actions:
-    - "Load COMPLETE file {project-root}/_bmad/saga/context.md if it exists"
-    - "Load COMPLETE file {project-root}/_bmad/saga/architecture.md if it exists"
-    - "Identify quest storage location: {project-root}/_bmad/rune-smith/quests/ or similar pattern"
+    - "Load COMPLETE file {saga_folder}/prd.md if it exists"
+    - "Load COMPLETE file {saga_folder}/architecture.md if it exists"
+    - "Identify quest storage location: {quests_folder}/"
     - "Load COMPLETE file {project-root}/_bmad/_memory/thor-sidecar/memories.md if it exists"
     - "Load COMPLETE file {project-root}/_bmad/_memory/thor-sidecar/instructions.md if it exists"
     - "ONLY read/write files in {project-root}/_bmad/_memory/thor-sidecar/ when updating persistent memory"

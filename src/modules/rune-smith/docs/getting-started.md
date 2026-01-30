@@ -29,9 +29,9 @@ Follow the prompts to configure the module for your needs. You will be asked whe
 ## First Steps
 
 1.  **Genesis (Onboarding):**
-    - Trigger Mimir with `[SC] Scan Project`.
-    - Provide a description of your project.
-    - Mimir will scan your codebase and generate the **Saga** (`context.md` and `architecture.md`).
+    - Trigger Mimir with `[FP] Forge PRD` to generate the PRD document.
+    - Then run `[FA] Forge Architecture` to generate the Architecture document.
+    - Mimir will analyze your codebase and generate the **Saga** (`prd.md` and `architecture.md`).
     - Review and approve these documents. They are now the "Source of Truth".
 
 2.  **The Quest (Feature Work):**
@@ -51,7 +51,7 @@ Follow the prompts to configure the module for your needs. You will be asked whe
 
 - **Daily Feature Work:** Using the Quest system to build complex features with high quality.
 - **Bug Fixing:** Using `[QF] Quick Fix` for rapid patches without overhead.
-- **Project Onboarding:** Using `[SC] Scan Project` to quickly generate documentation for a new or existing codebase.
+- **Project Onboarding:** Using `[FP] Forge PRD` and `[FA] Forge Architecture` to quickly generate documentation for a new or existing codebase.
 
 ---
 

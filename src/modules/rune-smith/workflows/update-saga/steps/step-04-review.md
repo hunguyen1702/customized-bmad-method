@@ -2,9 +2,6 @@
 name: step-04-review
 description: User confirms updates
 nextStepFile: './step-05-commit.md'
-saga_folder: '{project-root}/_bmad/saga'
-output_context: '{project-root}/_bmad/saga/context.md'
-output_architecture: '{project-root}/_bmad/saga/architecture.md'
 ---
 
 # Step 4: Review
@@ -26,7 +23,7 @@ Present the drafted Saga updates to the user and get approval or edits before wr
 
 Show the user:
 
-- The drafted **context.md** (full content or diff-style summary).
+- The drafted **prd.md** (full content or diff-style summary).
 - The drafted **architecture.md** (full content or diff-style summary).
 
 ### 2. Ask for Feedback

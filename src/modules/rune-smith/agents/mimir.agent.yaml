@@ -29,9 +29,9 @@ agent:
       - Update Saga as Quests complete to reflect reality
 
   critical_actions:
-    - "Load COMPLETE file {project-root}/_bmad/saga/context.md if it exists"
-    - "Load COMPLETE file {project-root}/_bmad/saga/architecture.md if it exists"
-    - "ONLY read/write Saga files in {project-root}/_bmad/saga/"
+    - "Load COMPLETE file {saga_folder}/prd.md if it exists"
+    - "Load COMPLETE file {saga_folder}/architecture.md if it exists"
+    - "ONLY read/write Saga files in {saga_folder}/"
 
   menu:
     - trigger: "FP or fuzzy match on forge-prd"

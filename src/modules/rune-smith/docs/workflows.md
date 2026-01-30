@@ -1,24 +1,49 @@
 # Workflows Reference
 
-rune-smith includes 5 workflows:
+rune-smith includes 6 workflows:
 
 ---
 
-## Scan Project
+## Forge PRD
 
-**ID:** `scan-project`
-**Workflow:** `scan-project`
+**ID:** `forge-prd`
+**Workflow:** `forge-prd`
 
 **Purpose:**
-Scan codebase to generate Saga (PRD/Arch).
+Generate a lightweight PRD document that helps developers and AI agents understand the project context.
 
 **When to Use:**
-At the beginning of a project or when onboarding the module to an existing project.
+At the beginning of a project or when onboarding the module to an existing project. Run this before Forge Architecture.
 
 **Key Steps:**
-1. Welcome & Input
-2. Scan Codebase
-3. Analyze & Draft
+1. Welcome & README
+2. Detect Project (greenfield/brownfield)
+3. Create Placeholder
+4. Scan Codebase (brownfield only)
+5. Consolidate Draft
+6. Review Cycle
+7. Finalize
+
+**Agent(s):**
+Mimir
+
+---
+
+## Forge Architecture
+
+**ID:** `forge-architecture`
+**Workflow:** `forge-architecture`
+
+**Purpose:**
+Generate a high-level Architecture Document that provides context for agents working with the codebase.
+
+**When to Use:**
+After creating the PRD. The architecture document serves as a "thinking map" for navigating the codebase.
+
+**Key Steps:**
+1. Detect PRD
+2. Create Draft
+3. Scan & Fill (6 sub-agents)
 4. Review
 5. Finalize
 

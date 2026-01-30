@@ -1,8 +1,9 @@
 # Workflow Specification: quick-fix
 
 **Module:** rune-smith
-**Status:** Placeholder — To be created via create-workflow workflow
+**Status:** Active
 **Created:** 2026-01-27
+**Updated:** 2026-01-30
 
 ---
 
@@ -85,8 +86,8 @@ None
 
 ## Implementation Notes
 
-**Use the create-workflow workflow to build this workflow.**
+Workflow implementation complete with 3 steps in `steps/` folder.
 
 ---
 
-_Spec created on 2026-01-27 via BMAD Module workflow_
+_Spec created on 2026-01-27, updated 2026-01-30 via BMAD Module workflow_

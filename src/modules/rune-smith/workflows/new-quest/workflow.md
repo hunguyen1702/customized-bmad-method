@@ -43,8 +43,8 @@ installed_path: '{project-root}/_bmad/rune-smith/workflows/new-quest'
 Load and read config from `{main_config}` and resolve:
 
 - `project_name`, `output_folder`, `user_name`, `communication_language`, `document_output_language`
-- Saga path: `{project-root}/_bmad/saga/`
-- Quests path: `{project-root}/quests/` or `{project-root}/_bmad/rune-smith/quests/` (per project config)
+- Saga path: `{saga_folder}/`
+- Quests path: `{quests_folder}/`
 
 ### 2. First Step Execution
 

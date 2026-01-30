@@ -19,10 +19,14 @@ Development roadmap for rune-smith module.
 
 ## Workflows to Build
 
-- [x] scan-project
+- [x] forge-prd
   - Use: `bmad:bmb:workflows:workflow` or `/workflow`
-  - Spec: `workflows/scan-project/scan-project.spec.md`
-  - Built: `workflows/scan-project/workflow.md`, `workflows/scan-project/steps/`
+  - Spec: `workflows/forge-prd/forge-prd.spec.md`
+  - Built: `workflows/forge-prd/workflow.md`, `workflows/forge-prd/steps/`
+- [x] forge-architecture
+  - Use: `bmad:bmb:workflows:workflow` or `/workflow`
+  - Spec: `workflows/forge-architecture/forge-architecture.spec.md`
+  - Built: `workflows/forge-architecture/workflow.md`, `workflows/forge-architecture/steps/`
 - [x] new-quest
   - Use: `bmad:bmb:workflows:workflow` or `/workflow`
   - Spec: `workflows/new-quest/new-quest.spec.md`
@@ -63,10 +67,10 @@ Development roadmap for rune-smith module.
 ## Next Steps
 
 1. ~~Build agents using create-agent workflow~~ (done: agents in `agents/*.agent.yaml`)
-2. ~~Build workflows using create-workflow workflow~~ (done: 5 workflows with steps)
+2. ~~Build workflows using create-workflow workflow~~ (done: 6 workflows with steps)
 3. Test installation and functionality (`bmad install rune-smith`)
 4. Iterate based on testing
 
 ---
 
-_Last updated: 2026-01-29_
+_Last updated: 2026-01-30_

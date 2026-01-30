@@ -2,8 +2,6 @@
 name: step-01-briefing
 description: Get user request and read Saga
 nextStepFile: './step-02-strategize.md'
-saga_folder: '{project-root}/_bmad/saga'
-quests_folder: '{project-root}/quests'
 ---
 
 # Step 1: Briefing
@@ -17,7 +15,7 @@ quests_folder: '{project-root}/quests'
 
 ## GOAL
 
-Understand the user's feature request and load the Saga (context.md, architecture.md) so you can plan the Quest.
+Understand the user's feature request and load the Saga (prd.md, architecture.md) so you can plan the Quest.
 
 ## SEQUENCE
 
@@ -25,10 +23,10 @@ Understand the user's feature request and load the Saga (context.md, architectur
 
 Load and read (if they exist):
 
-- `{project-root}/_bmad/saga/context.md`
-- `{project-root}/_bmad/saga/architecture.md`
+- `{saga_folder}/prd.md`
+- `{saga_folder}/architecture.md`
 
-If either is missing, inform the user they may need to run [SC] Scan Project with Mimir first.
+If either is missing, inform the user they may need to run [FP] Forge PRD and [FA] Forge Architecture with Mimir first.
 
 ### 2. Get User Request
 

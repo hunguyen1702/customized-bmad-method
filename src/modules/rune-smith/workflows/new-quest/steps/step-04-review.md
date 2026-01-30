@@ -2,8 +2,6 @@
 name: step-04-review
 description: User reviews Tech Spec
 nextStepFile: './step-05-create-quest.md'
-saga_folder: '{project-root}/_bmad/saga'
-quests_folder: '{project-root}/quests'
 ---
 
 # Step 4: Review

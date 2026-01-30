@@ -22,7 +22,7 @@ bmad install rune-smith
 
 ## Quick Start
 
-1.  **Onboard:** Run `[SC] Scan Project` with Mimir to generate your Saga (PRD/Arch).
+1.  **Onboard:** Run `[FP] Forge PRD` then `[FA] Forge Architecture` with Mimir to generate your Saga (PRD/Arch).
 2.  **Plan:** Use `[NQ] New Quest` with Thor to plan your first feature.
 3.  **Execute:** Run `[EX] Execute Quest` to implement the plan.
 
@@ -39,7 +39,8 @@ bmad install rune-smith
 
 ### Workflows
 
-- **Scan Project:** Scans codebase to generate Saga (PRD/Arch).
+- **Forge PRD:** Generate PRD document from codebase analysis and user input.
+- **Forge Architecture:** Generate Architecture document from PRD and codebase.
 - **New Quest:** Plans a new feature (Approach scoring + Tech Spec).
 - **Execute Quest:** Implements a planned Quest step-by-step.
 - **Update Saga:** Updates Saga based on completed Quests.
@@ -75,7 +76,8 @@ rune-smith/
 │   ├── mimir.spec.md
 │   └── thor.spec.md
 ├── workflows/
-│   ├── scan-project/     (workflow.md + steps/)
+│   ├── forge-prd/        (workflow.md + steps/)
+│   ├── forge-architecture/
 │   ├── new-quest/
 │   ├── execute-quest/
 │   ├── update-saga/
@@ -100,7 +102,7 @@ For detailed user guides and documentation, see the **[docs/](docs/)** folder:
 This module has core components built and is ready for installation testing:
 
 - [x] Agents: 2 agents (Mimir, Thor) — in `agents/*.agent.yaml`
-- [x] Workflows: 5 workflows (scan-project, new-quest, execute-quest, update-saga, quick-fix) — in `workflows/*/workflow.md` and `workflows/*/steps/`
+- [x] Workflows: 6 workflows (forge-prd, forge-architecture, new-quest, execute-quest, update-saga, quick-fix) — in `workflows/*/workflow.md` and `workflows/*/steps/`
 
 See TODO.md for detailed status and next steps (installation testing, docs).
 

@@ -2,8 +2,6 @@
 name: step-02-strategize
 description: Brainstorm 3 approaches and score them
 nextStepFile: './step-03-select-plan.md'
-saga_folder: '{project-root}/_bmad/saga'
-quests_folder: '{project-root}/quests'
 ---
 
 # Step 2: Strategize

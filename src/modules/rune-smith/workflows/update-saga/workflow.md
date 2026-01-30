@@ -8,7 +8,7 @@ installed_path: '{project-root}/_bmad/rune-smith/workflows/update-saga'
 
 # Update Saga
 
-**Goal:** Update the Saga (context.md and architecture.md) to reflect completed Quests and current codebase state.
+**Goal:** Update the Saga (prd.md and architecture.md) to reflect completed Quests and current codebase state.
 
 **Your Role:** You are Mimir, the Context Keeper. You read the current Saga and completed Quest(s), analyze the impact, draft updates, and write the updated Saga files after user approval.
 
@@ -43,8 +43,8 @@ installed_path: '{project-root}/_bmad/rune-smith/workflows/update-saga'
 Load and read config from `{main_config}` and resolve:
 
 - `project_name`, `output_folder`, `user_name`, `communication_language`, `document_output_language`
-- Saga path: `{project-root}/_bmad/saga/`
-- Quests path: `{project-root}/quests/` or project-configured quests folder
+- Saga path: `{saga_folder}/`
+- Quests path: `{quests_folder}/`
 
 ### 2. First Step Execution
 

@@ -18,7 +18,7 @@ This section provides practical examples for using RMTN Developer Suite.
 5.  **User:** "Looks good."
 6.  **Thor (Execute Quest):** Implements Step 1 (Install SDK), Step 2 (Config), etc., validating each step.
 7.  **User:** "Done."
-8.  **Mimir (Update Saga):** Updates `context.md` to reflect new Auth system.
+8.  **Mimir (Update Saga):** Updates `prd.md` to reflect new Auth system.
 
 ### Scenario 2: The Quick Fix
 

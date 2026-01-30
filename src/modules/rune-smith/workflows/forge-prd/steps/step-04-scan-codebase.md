@@ -1,7 +1,7 @@
 ---
 name: step-04-scan-codebase
 description: Scan codebase to gather PRD-relevant information (brownfield only)
-nextStepFile: './step-05-generate-prd.md'
+nextStepFile: './step-05-consolidate-draft.md'
 ---
 
 # Step 4: Scan Codebase

@@ -2,7 +2,7 @@
 name: step-03-create-placeholder
 description: Create draft PRD placeholder from template
 nextStepFile: './step-04-scan-codebase.md'
-skipToStepFile: './step-05-generate-prd.md'
+skipToStepFile: './step-05-consolidate-draft.md'
 prdTemplate: '../templates/prd-template.md'
 outputFile: '{output_folder}/prd-{project_name}.md'
 ---

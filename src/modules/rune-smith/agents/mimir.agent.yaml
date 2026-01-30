@@ -34,9 +34,13 @@ agent:
     - "ONLY read/write Saga files in {project-root}/_bmad/saga/"
 
   menu:
-    - trigger: "SC or fuzzy match on scan-project"
-      exec: "{project-root}/_bmad/rune-smith/workflows/scan-project/workflow.md"
-      description: "[SC] Scan Project - Generate Saga (PRD + Architecture) from codebase analysis and user input"
+    - trigger: "FP or fuzzy match on forge-prd"
+      exec: "{project-root}/_bmad/rune-smith/workflows/forge-prd/workflow.md"
+      description: "[FP] Forge PRD - Generate PRD from codebase analysis and user input"
+
+    - trigger: "FA or fuzzy match on forge-architecture"
+      exec: "{project-root}/_bmad/rune-smith/workflows/forge-architecture/workflow.md"
+      description: "[FA] Forge Architecture Document - Generate Architecture Document from PRD and codebase"
 
     - trigger: "US or fuzzy match on update-saga"
       exec: "{project-root}/_bmad/rune-smith/workflows/update-saga/workflow.md"

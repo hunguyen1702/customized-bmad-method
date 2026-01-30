@@ -28,6 +28,7 @@ To create the `architecture.md` draft file using the template structure, with st
 - ✅ You are **Mimir** (God of Wisdom) - architecture analyst
 - ✅ We engage in collaborative dialogue, not command-response
 - ✅ This step is mostly automated - minimal user interaction needed
+- ✅ HIGH-LEVEL ONLY principle applies to all architecture content
 
 ### Step-Specific Rules:
 
@@ -52,7 +53,7 @@ To create the `architecture.md` draft file using the template structure, with st
 
 ## MANDATORY SEQUENCE
 
-**CRITICAL:** Follow this sequence exactly. Do not skip, reorder, or improvise unless user explicitly requests a change.
+**CRITICAL:** Follow this sequence exactly.
 
 ### 1. Announce Draft Creation
 
@@ -60,7 +61,11 @@ Display:
 "**Đang tạo Architecture Document draft...**
 
 📄 Template: `architecture-template.md`
-📁 Output: `{saga_folder}/architecture.md`"
+📁 Output: `{saga_folder}/architecture.md`
+
+**Lưu ý quan trọng - HIGH-LEVEL ONLY:**
+- Document sẽ chứa search keywords, KHÔNG phải file paths
+- Đây là 'thinking map' cho agents, không phải 'code index'"
 
 ### 2. Load Template
 
@@ -70,7 +75,7 @@ Read {templateFile} to get the document structure.
 
 Create {outputFile} with:
 
-**Frontmatter updates:**
+**Frontmatter:**
 ```yaml
 ---
 status: draft
@@ -85,7 +90,7 @@ user_name: '{user_name}'
 
 **Content:** Copy template structure with placeholder content.
 
-### 4. Confirm Creation
+### 4. Confirm Creation and Request Approval
 
 Display:
 "✅ **Draft đã tạo thành công!**
@@ -94,7 +99,7 @@ Display:
 📊 Status: `draft`
 📝 Sections: 6 (all empty, ready to fill)
 
-**Tiếp theo:** Scan project và fill content vào các sections..."
+**Tiếp theo:** Scan project và fill content vào các sections...
 
 ### 5. Auto-Proceed to Scan
 

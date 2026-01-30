@@ -5,13 +5,14 @@ description: 'Scan codebase with 6 parallel sub-agents and fill architecture sec
 nextStepFile: './step-04-review.md'
 outputFile: '{saga_folder}/architecture.md'
 prdFile: '{saga_folder}/prd.md'
+subAgentMissions: './data/sub-agent-missions.md'
 ---
 
 # Step 3: Scan & Fill
 
 ## STEP GOAL:
 
-To analyze the codebase using **6 parallel sub-agents**, each responsible for filling one section of the architecture document. All agents work simultaneously for efficiency.
+To analyze the codebase using **6 parallel sub-agents**, each responsible for filling one section of the architecture document.
 
 ## MANDATORY EXECUTION RULES (READ FIRST):
 
@@ -32,16 +33,17 @@ To analyze the codebase using **6 parallel sub-agents**, each responsible for fi
 ### Step-Specific Rules:
 
 - 🎯 Use 6 PARALLEL sub-agents for scanning
+- 🚨 **DO NOT BE LAZY** - Thoroughly analyze codebase, this is critical for architecture quality
 - 🔍 HIGH-LEVEL ONLY: Search keywords, pattern names - NO code snippets, NO file paths
 - 🚫 FORBIDDEN to include specific file paths in output
 - 🚫 FORBIDDEN to include code snippets in output
-- 💬 Approach: Launch sub-agents → Aggregate results → Update document
+- 💬 Approach: Get approval → Launch sub-agents → Aggregate results → Update document
 - ⚙️ TOOL/SUBPROCESS FALLBACK: If sub-agents unavailable, perform sections sequentially in main thread
 
 ## EXECUTION PROTOCOLS:
 
 - 🎯 Follow the MANDATORY SEQUENCE exactly
-- 🔀 Launch 6 sub-agents in PARALLEL
+- ⚠️ **CRITICAL:** Launch ALL 6 sub-agents SIMULTANEOUSLY - do NOT wait for one to complete
 - 💾 Each sub-agent updates its section in {outputFile}
 - 📖 Update stepsCompleted when all sections filled
 
@@ -56,171 +58,68 @@ To analyze the codebase using **6 parallel sub-agents**, each responsible for fi
 
 ⚠️ **READ THIS BEFORE SCANNING** ⚠️
 
-The architecture document is a **thinking map**, not a **code index**.
-
 | ❌ FORBIDDEN | ✅ REQUIRED |
 |--------------|-------------|
 | `src/services/auth_service.rb` | `*Service`, `auth`, `authenticate` |
 | Code snippets | Pattern names and purposes |
 | Implementation details | Search keywords for agents |
-| Specific class names | Responsibility descriptions |
 
 **Why?** Agents use keywords to SEARCH the codebase. They don't copy-paste paths.
 
 ## MANDATORY SEQUENCE
 
-**CRITICAL:** Follow this sequence exactly. Do not skip, reorder, or improvise unless user explicitly requests a change.
+**CRITICAL:** Follow this sequence exactly.
 
-### 1. Announce Scan Start
+### 1. Read PRD for Context
 
-Display:
-"**🔍 Bắt đầu Scan & Fill...**
+Load {prdFile} to extract project name, key features, and technical hints.
 
-Tôi sẽ deploy **6 sub-agents** để scan project song song:
-
-| Agent | Section | Focus |
-|-------|---------|-------|
-| 🏗️ Agent 1 | High-Level Stack | Backend, DB, Async, Infra |
-| 🗺️ Agent 2 | Logic & Feature Mapping | PRD → Keywords |
-| 📊 Agent 3 | Data Model Strategy | Domain entities |
-| 🔌 Agent 4 | API Interface Strategy | API types |
-| ⚙️ Agent 5 | Coding Patterns | Patterns & keywords |
-| 🧪 Agent 6 | Testing Strategy | Test stack |
-
-**Đang scan...**"
-
-### 2. Read PRD for Context
-
-Load {prdFile} to extract:
-- Project name
-- Key features/requirements
-- Any technical hints
-
-This context guides all sub-agents.
-
-### 3. Determine Search Strategy
+### 2. Determine Search Strategy
 
 Based on PRD and project structure, infer:
 - Programming language (check file extensions)
 - Package manager (package.json, Gemfile, requirements.txt, etc.)
 - Framework hints from dependencies
-- Directory structure patterns
+
+### 3. Request User Approval
+
+Display:
+"**🔍 Sẵn sàng Scan & Fill**
+
+Tôi sẽ deploy **6 sub-agents** để scan project song song:
+
+| Agent | Section | Focus |
+|-------|---------|-------|
+| 🏗️ 1 | High-Level Stack | Backend, DB, Async, Infra |
+| 🗺️ 2 | Logic & Feature Mapping | PRD → Keywords |
+| 📊 3 | Data Model Strategy | Domain entities |
+| 🔌 4 | API Interface Strategy | API types |
+| ⚙️ 5 | Coding Patterns | Patterns & keywords |
+| 🧪 6 | Testing Strategy | Test stack |
+
+**Bắt đầu scan?** [Y] Yes / [N] Cancel"
+
+**Wait for user approval before proceeding.**
 
 ### 4. Launch 6 Parallel Sub-Agents
 
-**Launch ALL 6 sub-agents simultaneously:**
+**IF user approves (Y):**
 
----
+Load {subAgentMissions} for detailed instructions.
 
-**SUB-AGENT 1: High-Level Stack**
+Launch ALL 6 sub-agents simultaneously. Each sub-agent:
+1. Scans codebase for its designated section
+2. Follows HIGH-LEVEL ONLY principle
+3. Returns structured content (see {subAgentMissions} for formats)
 
-*Mission:* Fill Section 1 with tech stack info
-
-*Search for:*
-- Package files (package.json, Gemfile, requirements.txt, go.mod, etc.)
-- Config files (docker-compose, Dockerfile, .env.example)
-- README for tech mentions
-
-*Fill:*
-- Backend framework
-- Database
-- Async processing (if any)
-- Infrastructure hints
-
----
-
-**SUB-AGENT 2: Logic & Feature Mapping**
-
-*Mission:* Fill Section 2 - map PRD features to search keywords
-
-*Process:*
-1. List features from PRD
-2. For EACH feature, identify search keywords (NOT paths!)
-3. Add responsibility description
-
-*Output format:*
-```
-| Feature | Search Keywords | Responsibility |
-| Auth | `auth`, `session`, `login`, `jwt` | Manages user authentication |
-```
-
----
-
-**SUB-AGENT 3: Data Model Strategy**
-
-*Mission:* Fill Section 3 with domain entities
-
-*Search for:*
-- Model/Entity definitions
-- Database schema/migrations
-- Type definitions
-
-*Fill:*
-- Core domain entities (abstracted, not table names)
-- Entity relationships (conceptual)
-
----
-
-**SUB-AGENT 4: API Interface Strategy**
-
-*Mission:* Fill Section 4 with API types
-
-*Search for:*
-- Route definitions
-- Controller/Handler patterns
-- API documentation
-
-*Categorize APIs by:*
-- Public vs Private
-- Admin vs User
-- Webhooks
-- Feature-specific groups
-
----
-
-**SUB-AGENT 5: Coding Patterns & Search Strategy**
-
-*Mission:* Fill Section 5 with patterns and search keywords
-
-*Search for common patterns:*
-- Service Objects (`*Service`, `*Manager`)
-- Query Objects (`*Query`, `*Repository`)
-- Form/Policy Objects (`*Policy`, `*Form`)
-- Decorators/Presenters (`*Decorator`, `*Serializer`)
-- Workers/Jobs (`*Worker`, `*Job`)
-
-*For each pattern found, document:*
-- Pattern name
-- Purpose in this codebase
-- Search keywords/suffixes
-
----
-
-**SUB-AGENT 6: Testing Strategy**
-
-*Mission:* Fill Section 6 with test stack
-
-*Search for:*
-- Test config files (jest.config, rspec, pytest.ini)
-- Test directories structure
-- Mock/stub patterns
-
-*Document:*
-- Test framework
-- Data seeding approach
-- External HTTP handling
-- Coverage tools
-
----
+**IF sub-agents unavailable:** Perform sections sequentially in main thread.
 
 ### 5. Aggregate and Update Document
 
 After all sub-agents complete:
 1. Collect all section content
 2. Update {outputFile} with filled sections
-3. Update frontmatter:
-   - Add 'step-03-scan-and-fill' to stepsCompleted
-   - Update lastStep
+3. Update frontmatter: Add 'step-03-scan-and-fill' to stepsCompleted
 
 ### 6. Display Summary
 
@@ -235,10 +134,7 @@ Display:
 - ⚙️ Section 5 (Patterns): [X patterns]
 - 🧪 Section 6 (Testing): [summary]
 
-**Lưu ý:** Tất cả content đều ở mức HIGH-LEVEL (keywords, patterns).
-Không có file paths hoặc code snippets.
-
-**Tiếp theo:** Review document với bạn."
+**Lưu ý:** Tất cả content đều ở mức HIGH-LEVEL (keywords, patterns)."
 
 ### 7. Present MENU OPTIONS
 
@@ -253,11 +149,10 @@ Display: "**Select:** [C] Continue to Review"
 
 - ALWAYS halt and wait for user input after presenting menu
 - ONLY proceed to next step when user selects 'C'
-- User may ask questions about scan results before continuing
 
 ## CRITICAL STEP COMPLETION NOTE
 
-ONLY WHEN user selects 'C' and document is updated will you load `./step-04-review.md` for user review.
+ONLY WHEN user selects 'C' and document is updated will you load `./step-04-review.md`.
 
 ---
 
@@ -265,19 +160,17 @@ ONLY WHEN user selects 'C' and document is updated will you load `./step-04-revi
 
 ### ✅ SUCCESS:
 
+- User approved before scanning started
 - All 6 sections filled with HIGH-LEVEL content
-- No file paths in output
-- No code snippets in output
+- No file paths or code snippets in output
 - Search keywords provided for each feature/pattern
 - Document updated with stepsCompleted
-- User can proceed to review
 
 ### ❌ SYSTEM FAILURE:
 
-- Including specific file paths (e.g., `src/services/auth.rb`)
-- Including code snippets
+- Starting scan without user approval
+- Including file paths or code snippets
 - Missing any of the 6 sections
-- Running sub-agents sequentially when parallel is possible
-- Not using search keywords format
+- Being lazy - superficial analysis
 
-**Master Rule:** Skipping steps, optimizing sequences, or not following exact instructions is FORBIDDEN and constitutes SYSTEM FAILURE.
+**Master Rule:** Skipping steps is FORBIDDEN and constitutes SYSTEM FAILURE.
